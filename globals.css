@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 250, 250, 250;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/diet_quality_vs_cognitive_performance.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105;
+}
+
+.section-heading {
+  @apply text-3xl font-bold mb-6 text-center text-gray-800 border-b-2 border-green-500 pb-2 inline-block;
+}
+
+.visualization-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl;
+}
+
+.visualization-card img {
+  @apply w-full h-48 object-cover;
+}
+
+.visualization-card:hover {
+  @apply transform scale-105;
+}
+
+.key-finding {
+  @apply bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg shadow-md mb-4 border-l-4 border-green-500;
+}
+
+.key-finding h3 {
+  @apply text-xl font-bold mb-2 text-green-700;
+}
+
+.key-finding p {
+  @apply text-gray-700;
+}
+
+.recommendation {
+  @apply bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg shadow-md mb-4 border-l-4 border-blue-500;
+}
+
+.recommendation h3 {
+  @apply text-xl font-bold mb-2 text-blue-700;
+}
+
+.recommendation p {
+  @apply text-gray-700;
+}
